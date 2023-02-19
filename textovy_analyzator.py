@@ -46,7 +46,7 @@ We have 3 texts to be analyzed.
 {rozdelovac}""")
     user_input = input("Enter a number btw. 1 and 3 to select: ")
     print(rozdelovac)
-    if user_input.isdigit() == False:
+    if not user_input.isdigit():
         print("Digits only. Quit...")
         quit()
     elif int(user_input)<1 or int(user_input)>3:
@@ -81,7 +81,7 @@ The sum of all the numbers {digits_sum}
                     word_lenght[len(word1.strip(",."))] = word_lenght[len(word1.strip(",."))] + 1
         for pismen, pocet in sorted(word_lenght.items()):
             hvezda = "*"*pocet
-            print(f"{pismen:>3}|{hvezda}|{pocet}")
+            print(f"{pismen:>3}|{hvezda:<14}|{pocet}")
 else:
     print("unregistered user, terminating the program..")
     quit()
